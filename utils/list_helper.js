@@ -9,8 +9,15 @@ const totalLikes = (blogs) => {
     return 0
   }
 }
+
+const favoriteBlog = (blogs) => {
+  const likes = blogs.map(blog => blog.likes)
+  const favorite = likes.indexOf(Math.max(...likes))
+  return blogs.at(favorite)
+}
   
 module.exports = {
   dummy,
-  totalLikes
+  totalLikes,
+  favoriteBlog
 }

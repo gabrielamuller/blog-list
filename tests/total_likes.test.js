@@ -51,6 +51,7 @@ const blogs = [
   }
 ]
 
+// Total likes
 describe('total likes', () => {
 
   // No blogs
@@ -82,5 +83,13 @@ describe('total likes', () => {
     const listWithBlogs = blogs.map(e => e.likes)
     const result = listHelper.totalLikes(listWithBlogs)
     expect(result).toBe(36)
+  })
+})
+
+// Favorite blog
+describe('Favorite Blog', () => {
+  test('most likes', () => {
+    const result = listHelper.favoriteBlog(blogs)
+    expect(result).toEqual(blogs[2])
   })
 })
