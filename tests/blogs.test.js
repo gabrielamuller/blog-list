@@ -111,3 +111,15 @@ describe('Author', () => {
     })
   })
 })
+
+// Most likes
+describe('Author', () => {
+  test('Most likes', async () => {
+    const mostLikes = listHelper.mostLikes(blogs)
+
+    expect(mostLikes).toMatchObject({
+      author: 'Edsger W. Dijkstra',
+      likes: 17
+    })
+  })
+})
